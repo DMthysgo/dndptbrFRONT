@@ -1,14 +1,9 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const user_id = urlParams.get("user");
-
+async function carregarFicha() {
+  const nome = document.querySelector('input[name="personagem_nome"]').value;
   try {
-    const response = await fetch(
-      `https://dndptbr.vercel.app/ficha/${user_id}`,
-      {
-        method: "GET",
-      }
-    );
+    const response = await fetch(`https://dndptbr.vercel.app/ficha/${nome}`, {
+      method: "GET",
+    });
 
     const fichaData = await response.json();
     if (response.ok) {
@@ -19,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (error) {
     console.error("Erro ao acessar a ficha de personagem:", error);
   }
-});
+}
 
 function atualizarFicha(Data) {
   const {
@@ -1323,11 +1318,10 @@ async function salvarFicha() {
     'textarea[name="personagem_anotacoes"]'
   );
 
-  const urlParams = new URLSearchParams(window.location.search);
-  const user_id = urlParams.get("user");
+  const nome = document.querySelector('input[name="personagem_nome"]').value;
 
   const Ficha = {
-    user: user_id,
+    user: nome,
     nome: HTMLnome.value,
     especie: HTMLespecie.value,
     subespecie: HTMLsubespecie.value,
