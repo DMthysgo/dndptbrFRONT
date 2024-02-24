@@ -1,0 +1,4026 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap"
+      rel="stylesheet"
+    />
+    <title>DMThysgo Ficha</title>
+    <link rel="stylesheet" type="text/css" href="css/dmthysgoficha.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Filtros -->
+    <div class="sheet-main sheet-text-align-center">
+      <input
+        type="radio"
+        name="attr_tab"
+        class="sheet-tab-button sheet-tab-button1"
+        value="1"
+        title="No1"
+      />
+      <div class="sheet-icon sheet-icon-tab-Habilidades"></div>
+      <span class="sheet-tab-label">Habilidades&nbsp;</span>
+      <input
+        type="radio"
+        name="attr_tab"
+        class="sheet-tab-button sheet-tab-button2"
+        value="2"
+        title="No2"
+      />
+      <div class="sheet-icon sheet-icon-tab-equipment"></div>
+      <span class="sheet-tab-label">Equipamento e Combate&nbsp;</span>
+      <input
+        type="radio"
+        name="attr_tab"
+        class="sheet-tab-button sheet-tab-button3"
+        value="3"
+        title="No3"
+      />
+      <div class="sheet-icon sheet-icon-mount"></div>
+      <span class="sheet-tab-label">Pets e Propriedades&nbsp;</span>
+      <input
+        type="radio"
+        name="attr_tab"
+        class="sheet-tab-button sheet-tab-button4"
+        value="4"
+        title="No4"
+      />
+      <div class="sheet-icon sheet-icon-tab-magic"></div>
+      <span class="sheet-tab-label">Magias&nbsp;</span>
+      <input
+        type="radio"
+        name="attr_tab"
+        class="sheet-tab-button sheet-tab-button5"
+        value="5"
+        title="No5"
+      />
+      <div class="sheet-icon sheet-icon-tab-notebook"></div>
+      <span class="sheet-tab-label">Anotações&nbsp;</span>
+      <input
+        type="radio"
+        name="attr_tab"
+        class="sheet-tab-button sheet-tab-button-all"
+        value="6"
+        title="Everything"
+        checked
+      />
+      <span class="sheet-tab-label">Tudo</span>
+      <hr />
+
+      <!-- Sempre visivel -->
+      <!-- Cabeçalho -->
+      <div class="sheet-header">
+        <!-- Nome -->
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Nome do Personagem</div>
+          <input
+            class="sheet-long-text-input"
+            type="text"
+            name="personagem_nome"
+            placeholder="Fulanin"
+            style="text-align: center"
+          />
+        </div>
+        <!-- Raça e sub-raça -->
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Espécie</div>
+          <select name="personagem_especie" style="text-align: left">
+            <optgroup label="Comum">
+              <option value="Anão">Anão</option>
+              <option value="Draconato">Draconato</option>
+              <option value="Elfo">Elfo</option>
+              <option value="Gnomo">Gnomo</option>
+              <option value="Halfling">Halfling</option>
+              <option value="Humano" selected>Humano</option>
+              <option value="Meio-Elfo">Meio-Elfo</option>
+              <option value="Meio-Orc">Meio-Orc</option>
+              <option value="Tiefling">Tiefling</option>
+            </optgroup>
+            <optgroup label="Incomum">
+              <option value="Aarakocra">Aarakocra</option>
+              <option value="Aasimar">Aasimar</option>
+              <option value="Changeling">Changeling</option>
+              <option value="Forjado">Forjado</option>
+              <option value="Firbolg">Firbolg</option>
+              <option value="Genasi">Genasi</option>
+              <option value="Gith">Gith</option>
+              <option value="Goliath">Goliath</option>
+              <option value="Kenku">Kenku</option>
+              <option value="Orc">Orc</option>
+              <option value="Povo Lagarto">Povo Lagarto</option>
+              <option value="Shifter">Shifter</option>
+              <option value="Tabaxi">Tabaxi</option>
+              <option value="Tritão">Tritão</option>
+            </optgroup>
+            <optgroup label="Monstruosas">
+              <option value="Bugbear">Bugbear</option>
+              <option value="Goblin">Goblin</option>
+              <option value="Hobgoblin">Hobgoblin</option>
+              <option value="Minotauro">Minotauro (Krynn)</option>
+              <option value="Yuan-Ti">Yuan-Ti</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Sub-espécie</div>
+          <select name="personagem_sub_especie" style="text-align: left">
+            <option value="none">Padrão</option>
+          </select>
+        </div>
+        <!-- Classe e sub-classe -->
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Classe</div>
+          <select name="personagem_classe" style="text-align: left">
+            <option value="Bárbaro">Bárbaro</option>
+            <option value="Bardo">Bardo</option>
+            <option value="Bruxo">Bruxo</option>
+            <option value="Clérigo">Clérigo</option>
+            <option value="Druida">Druida</option>
+            <option value="Feiticeiro">Feiticeiro</option>
+            <option value="Guerreiro">Guerreiro</option>
+            <option value="Ladino">Ladino</option>
+            <option value="Mago">Mago</option>
+            <option value="Monge">Monge</option>
+            <option value="Paladino">Paladino</option>
+            <option value="Patrulheiro">Patrulheiro</option>
+          </select>
+        </div>
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Sub-Classe</div>
+          <select name="personagem_sub_classe" style="text-align: left">
+            <option value="none">Padrão</option>
+          </select>
+        </div>
+        <br />
+        <!-- Nível, XP e XP+ -->
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Nível</div>
+          <input
+            class="sheet-numbox"
+            style="width: 2em; text-align: center"
+            type="text"
+            name="personagem_nivel"
+            value="1"
+            readonly
+          />
+        </div>
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Experiência</div>
+          <input
+            class="sheet-long-numbox"
+            style="width: 6em; text-align: center"
+            type="number"
+            name="personagem_xp"
+            min="0"
+            step="10"
+            value="0"
+            onchange="campoAlterado(this)"
+          />
+        </div>
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">XP p/Levelup</div>
+          <input
+            class="sheet-long-numbox"
+            style="width: 6em; text-align: center"
+            type="text"
+            name="personagem_xp_plus"
+            min="0"
+            step="1"
+            value="300"
+            readonly
+          />
+        </div>
+        <!-- Inspiração -->
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Inspiração</div>
+          <input
+            class="sheet-long-numbox"
+            style="width: 4em; text-align: center"
+            type="number"
+            name="personagem_inspiracao"
+            min="0"
+            max="5"
+            step="1"
+            value="0"
+          />
+        </div>
+        <!-- Proficiência -->
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Proficiência</div>
+          <input
+            class="sheet-long-numbox"
+            style="width: 4em; text-align: center"
+            type="text"
+            name="personagem_proficiencia"
+            value="+2"
+            readonly
+          />
+        </div>
+        <!-- Iniciativa -->
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Iniciativa</div>
+          <input
+            class="sheet-long-numbox"
+            style="width: 4em; text-align: center"
+            type="text"
+            name="personagem_iniciativa"
+            value="+0"
+          />
+        </div>
+        <!-- Alinhamento -->
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Alinhamento</div>
+          <select name="personagem_alinhamento" style="text-align: left">
+            <option value="Neutro bom">Neutro bom</option>
+            <option value="Leal bom">Leal bom</option>
+            <option value="Caótico bom">Caótico bom</option>
+            <option value="Neutro">Neutro</option>
+            <option value="Leal Neutro">Leal Neutro</option>
+            <option value="Caótico Neutro">Caótico Neutro</option>
+            <option value="Neutro mal">Neutro mal</option>
+            <option value="Leal mal">Leal mal</option>
+            <option value="Caótico mal">Caótico mal</option>
+          </select>
+        </div>
+        <br />
+        <!-- Deslocamento -->
+        <span class="sheet-big-bold-fancy">Desloc.:</span>
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Base</div>
+          <input
+            class="sheet-long-numbox"
+            style="width: 4em; text-align: center"
+            type="text"
+            name="personagem_deslocamento_base"
+            value="9m"
+            onchange="campoAlterado(this)"
+            readonly
+          />
+        </div>
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Voo</div>
+          <input
+            class="sheet-long-numbox"
+            style="width: 4em; text-align: center"
+            type="text"
+            name="personagem_deslocamento_voo"
+            value="0m"
+          />
+        </div>
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Nado</div>
+          <input
+            class="sheet-long-numbox"
+            style="width: 4em; text-align: center"
+            type="text"
+            name="personagem_deslocamento_nado"
+            value="6m"
+          />
+        </div>
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Escalada</div>
+          <input
+            class="sheet-long-numbox"
+            style="width: 4em; text-align: center"
+            type="text"
+            name="personagem_deslocamento_escalada"
+            value="4.5m"
+          />
+        </div>
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">SaltoH</div>
+          <input
+            class="sheet-long-numbox"
+            style="width: 4em; text-align: center"
+            type="text"
+            name="personagem_deslocamento_saltoh"
+            value="3m"
+          />
+        </div>
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">SaltoV</div>
+          <input
+            class="sheet-long-numbox"
+            style="width: 4em; text-align: center"
+            type="text"
+            name="personagem_deslocamento_saltov"
+            value="1m"
+          />
+        </div>
+        <div class="sheet-header-block">
+          <div class="sheet-undertext">Ficha</div>
+          <button style="text-align: center" onclick="salvarFicha()">
+            add/att
+          </button>
+        </div>
+      </div>
+      <!-- Fim do Cabeçalho -->
+
+      <!-- Guia 1 -->
+      <div class="sheet-tabbed-pane sheet-tab sheet-tab1">
+        <table class="sheet-columns">
+          <tr>
+            <!-- Coluna 1 -->
+            <td class="sheet-column1-cell">
+              <div class="sheet-column1">
+                <!-- Pontos de atributos -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div class="sheet-section-frame sheet-section-content">
+                          <!-- Titúlo da seção -->
+                          <div
+                            class="sheet-section-title-bar sheet-text-align-left"
+                          >
+                            <div
+                              class="sheet-icon-large sheet-icon-section-ability-scores"
+                            ></div>
+                            Atributos
+                          </div>
+
+                          <table class="sheet-subsection-table">
+                            <!-- Cabeçalho -->
+                            <tr>
+                              <th colspan="2">Habilidade</th>
+                              <th></th>
+                              <th>Mod.</th>
+                              <th>Resist.</th>
+                              <th></th>
+                            </tr>
+                            <!-- Linha de força -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon-large sheet-icon-strength"
+                                ></div>
+                              </td>
+                              <td style="vertical-align: middle">
+                                <div class="sheet-big-bold">FOR</div>
+                                <div
+                                  class="sheet-undertext sheet-text-align-center"
+                                >
+                                  Força
+                                </div>
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  style="width: 3em"
+                                  class="sheet-numbox"
+                                  type="number"
+                                  name="personagem_forca"
+                                  min="0"
+                                  step="1"
+                                  value="10"
+                                  onchange="campoAlterado(this)"
+                                />
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  style="width: 2em"
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_modificador_forca"
+                                  value="0"
+                                  readonly
+                                />
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  type="checkbox"
+                                  name="personagem_resistencia_forca"
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de destreza -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon-large sheet-icon-dexterity"
+                                ></div>
+                              </td>
+                              <td style="vertical-align: middle">
+                                <div class="sheet-big-bold">DES</div>
+                                <div
+                                  class="sheet-undertext sheet-text-align-center"
+                                >
+                                  Destreza
+                                </div>
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  style="width: 3em"
+                                  class="sheet-numbox"
+                                  type="number"
+                                  name="personagem_destreza"
+                                  min="0"
+                                  step="1"
+                                  value="10"
+                                  onchange="campoAlterado(this)"
+                                />
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  style="width: 2em"
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_modificador_destreza"
+                                  value="0"
+                                  readonly
+                                />
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  type="checkbox"
+                                  name="personagem_resistencia_destreza"
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de constituição -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon-large sheet-icon-constitution"
+                                ></div>
+                              </td>
+                              <td style="vertical-align: middle">
+                                <div class="sheet-big-bold">CON</div>
+                                <div
+                                  class="sheet-undertext sheet-text-align-center"
+                                >
+                                  Constituição
+                                </div>
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  style="width: 3em"
+                                  class="sheet-numbox"
+                                  type="number"
+                                  name="personagem_constituicao"
+                                  min="0"
+                                  step="1"
+                                  value="10"
+                                  onchange="campoAlterado(this)"
+                                />
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  style="width: 2em"
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_modificador_constituicao"
+                                  value="0"
+                                  readonly
+                                />
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  type="checkbox"
+                                  name="personagem_resistencia_constituicao"
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de inteligencia -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon-large sheet-icon-intelligence"
+                                ></div>
+                              </td>
+                              <td style="vertical-align: middle">
+                                <div class="sheet-big-bold">INT</div>
+                                <div
+                                  class="sheet-undertext sheet-text-align-center"
+                                >
+                                  Inteligência
+                                </div>
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  style="width: 3em"
+                                  class="sheet-numbox"
+                                  type="number"
+                                  name="personagem_inteligencia"
+                                  min="0"
+                                  step="1"
+                                  value="10"
+                                  onchange="campoAlterado(this)"
+                                />
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  style="width: 2em"
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_modificador_inteligencia"
+                                  value="0"
+                                  readonly
+                                />
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  type="checkbox"
+                                  name="personagem_resistencia_inteligencia"
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de sabedoria -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon-large sheet-icon-wisdom"
+                                ></div>
+                              </td>
+                              <td style="vertical-align: middle">
+                                <div class="sheet-big-bold">SAB</div>
+                                <div
+                                  class="sheet-undertext sheet-text-align-center"
+                                >
+                                  Sabedoria
+                                </div>
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  style="width: 3em"
+                                  class="sheet-numbox"
+                                  type="number"
+                                  name="personagem_sabedoria"
+                                  min="0"
+                                  step="1"
+                                  value="10"
+                                  onchange="campoAlterado(this)"
+                                />
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  style="width: 2em"
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_modificador_sabedoria"
+                                  value="0"
+                                  readonly
+                                />
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  type="checkbox"
+                                  name="personagem_resistencia_sabedoria"
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de carisma -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon-large sheet-icon-charisma"
+                                ></div>
+                              </td>
+                              <td style="vertical-align: middle">
+                                <div class="sheet-big-bold">CAR</div>
+                                <div
+                                  class="sheet-undertext sheet-text-align-center"
+                                >
+                                  Carisma
+                                </div>
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  style="width: 3em"
+                                  class="sheet-numbox"
+                                  type="number"
+                                  name="personagem_carisma"
+                                  min="0"
+                                  step="1"
+                                  value="10"
+                                  onchange="campoAlterado(this)"
+                                />
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  style="width: 2em"
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_modificador_carisma"
+                                  value="0"
+                                  readonly
+                                />
+                              </td>
+                              <td style="vertical-align: middle">
+                                <input
+                                  type="checkbox"
+                                  name="personagem_resistencia_carisma"
+                                />
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Fim da caixa de atributos -->
+
+                <br />
+
+                <!-- Perícias -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div class="sheet-section-frame sheet-section-content">
+                          <!-- Titúlo da seção -->
+                          <div
+                            class="sheet-section-title-bar sheet-text-align-left"
+                          >
+                            <div
+                              class="sheet-icon-large sheet-icon-section-skills"
+                            ></div>
+                            Perícias
+                          </div>
+                          <table class="sheet-subsection-table">
+                            <!-- Cabeçalho -->
+                            <tr>
+                              <th colspan="2">Perícias</th>
+                              <th>Prof.</th>
+                              <th>Bônus</th>
+                            </tr>
+                            <!-- Linha de Atletismo -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-athletics"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Atletismo (For)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_atletismo"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_atletismo"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de acrobacia -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-acrobatics"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Acrobacia (Des)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_acrobacia"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_acrobacia"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de Furtividade -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-stealth"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Furtividade (Des)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_furtividade"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_furtividade"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de Prestidigitação -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-sleight-of-hand"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Prestidigitação (Des)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_prestidigitacao"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_prestidigitacao"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de arcanismo -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-arcana"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Arcanismo (Int)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_arcanismo"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_arcanismo"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de História -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-history"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  História (Int)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_historia"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_historia"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de Investigação -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-investigation"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Investigação (Int)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_investigacao"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_investigacao"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de Natureza -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-nature"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Natureza (Int)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_natureza"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_natureza"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de Religião -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-religion"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Religião (Int)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_religiao"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_religiao"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de Intuição -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-insight"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Intuição (Sab)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_intuicao"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_intuicao"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de lidar com animais -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-animal-handling"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Lidar com animais (Sab)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_animais"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_animais"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de Medícina -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-medicine"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Medícina (Sab)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_medicina"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_medicina"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de Percepção -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-perception"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Percepção (Sab)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_percepcao"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_percepcao"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de Sobrevivência -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-survival"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Sobrevivência (Sab)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_sobrevivencia"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_sobrevivencia"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de Atuação -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-performance"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Atuação (Car)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_atuacao"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_atuacao"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de Manipulação -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-deception"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Manipulação (Car)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_manipulacao"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_manipulacao"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de Intimidação -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-intimidation"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Intimidação (Car)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_intimidacao"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_intimidacao"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                            <!-- Linha de Persuasão -->
+                            <tr>
+                              <td>
+                                <div
+                                  class="sheet-icon sheet-icon-skill-persuasion"
+                                ></div>
+                              </td>
+                              <td>
+                                <div
+                                  class="sheet-section-line-item sheet-skill-name"
+                                >
+                                  Persuasão (Car)
+                                </div>
+                              </td>
+                              <td>
+                                <select
+                                  class="sheet-numbox"
+                                  name="personagem_prof_persuasao"
+                                  onchange="campoAlterado(this)"
+                                >
+                                  <option value="0">0</option>
+                                  <option value="0.5">½P</option>
+                                  <option value="1">P</option>
+                                  <option value="2">2×P</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  type="text"
+                                  name="personagem_bonus_persuasao"
+                                  value="+0"
+                                  readonly
+                                />
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Fim da caixa de perícias -->
+
+                <br />
+
+                <!-- Proficiências -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div class="sheet-section-frame sheet-section-content">
+                          <!-- Titúlo da seção -->
+                          <div
+                            class="sheet-section-title-bar sheet-text-align-left"
+                          >
+                            <div
+                              class="sheet-icon-large sheet-icon-section-proficiencies"
+                            ></div>
+                            Proficiências
+                          </div>
+                          <dl class="sheet-text-align-left">
+                            <dt class="sheet-big-bold">Idiomas Padrão</dt>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_comum"
+                                checked
+                              />
+                              Comum
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_anao"
+                              />
+                              Anão
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_elfico"
+                              />
+                              Élfico
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_gigante"
+                              />
+                              Gigante
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_gnomico"
+                              />
+                              Gnômico
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_goblin"
+                              />
+                              Goblin
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_halfling"
+                              />
+                              Halfling
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_orc"
+                              />
+                              Orc
+                            </dd>
+                            <dt class="sheet-big-bold">Idiomas Exóticos</dt>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_abissal"
+                              />
+                              Abissal
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_celestial"
+                              />
+                              Celestial
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_subterraneo"
+                              />
+                              Dialeto Subterraneo
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_draconico"
+                              />
+                              Dracônico
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_infernal"
+                              />
+                              Infernal
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_primordial"
+                              />
+                              Primordial
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_silvestre"
+                              />
+                              Silvestre
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_idioma_subcomum"
+                              />
+                              Subcomum
+                            </dd>
+                            <dt class="sheet-big-bold">Armaduras</dt>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_armadura_leve"
+                              />
+                              Leve
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_armadura_media"
+                              />
+                              Média
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_armadura_pesada"
+                              />
+                              Pesada
+                            </dd>
+                            <dt class="sheet-big-bold">Armas</dt>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_arma_simplescac"
+                              />
+                              Simples Corpo a Corpo
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_arma_simplesdistancia"
+                              />
+                              Simples à distancia
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_arma_marcialcac"
+                              />
+                              Marcial Corpo a Corpo
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_arma_marcialdistancia"
+                              />
+                              Marcial à distancia
+                            </dd>
+                            <dt class="sheet-big-bold">Ferramentas</dt>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_ferramenta_instrumento"
+                              />
+                              Instrumentos
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_ferramenta_kit_disfarce"
+                              />
+                              Kit de Disfarce
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_ferramenta_kit_falsificacao"
+                              />
+                              Kit de Falsificação
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_ferramenta_kit_herbalismo"
+                              />
+                              Kit de Herbalismo
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_ferramenta_kit_veneno"
+                              />
+                              Kit de Veneno
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_ferramenta_baralho"
+                              />
+                              Baralho
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_ferramenta_dados"
+                              />
+                              Dados
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_ferramenta_xadrez"
+                              />
+                              Xadrez
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_ferramenta_ladrao"
+                              />
+                              Ferramentas de Ladrão
+                            </dd>
+                            <dd>
+                              <input
+                                type="checkbox"
+                                name="personagem_prof_ferramenta_navegacao"
+                              />
+                              Ferramentas de Navegação
+                            </dd>
+                            <dt class="sheet-big-bold">Outros:</dt>
+                          </dl>
+                          <textarea
+                            class="sheet-paragraph-box"
+                            name="personagem_prof_outros"
+                          ></textarea>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Fim da caixa de proficiências -->
+              </div>
+            </td>
+            <!-- FIM DA COLUNA 1 -->
+
+            <!-- Coluna 2 -->
+            <td class="sheet-column2-cell">
+              <div class="sheet-column2">
+                <!-- Traços Pessoais -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div class="sheet-section-frame sheet-section-content">
+                          <!-- Titúlo da seção -->
+                          <div class="sheet-section-title-bar">
+                            <div
+                              class="sheet-icon-large sheet-icon-section-identity"
+                            ></div>
+                            Traços Pessoais
+                          </div>
+
+                          <!-- Antecedente -->
+                          <div style="vertical-align: top">
+                            <div class="sheet-undertext">Antecedente</div>
+                            <input
+                              style="width: 95%"
+                              type="text"
+                              name="personagem_antecedente"
+                            />
+                          </div>
+
+                          <!-- Caixas com multiplas linhas -->
+                          <!-- Personalidade -->
+                          <div>
+                            <div>
+                              <div
+                                class="sheet-icon sheet-icon-personality"
+                              ></div>
+                              Traços de personalidade
+                            </div>
+                            <textarea
+                              class="sheet-paragraph-box"
+                              name="persongem_personalidade"
+                            ></textarea>
+                          </div>
+
+                          <!-- Ideais -->
+                          <div>
+                            <div>
+                              <div class="sheet-icon sheet-icon-ideals"></div>
+                              Ideais
+                            </div>
+                            <textarea
+                              class="sheet-paragraph-box"
+                              name="personagem_ideais"
+                            ></textarea>
+                          </div>
+
+                          <!-- Vínculos -->
+                          <div>
+                            <div>
+                              <div class="sheet-icon sheet-icon-bonds"></div>
+                              Vínculos
+                            </div>
+                            <textarea
+                              class="sheet-paragraph-box"
+                              name="personagem_vinculos"
+                            ></textarea>
+                          </div>
+
+                          <!-- Defeitos -->
+                          <div>
+                            <div>
+                              <div class="sheet-icon sheet-icon-flaws"></div>
+                              Defeitos
+                            </div>
+                            <textarea
+                              class="sheet-paragraph-box"
+                              name="personagem_defeitos"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Fim da caixa de traços pessoais -->
+
+                <br />
+
+                <!-- Aparência -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div class="sheet-section-frame sheet-section-content">
+                          <!-- Titúlo da seção -->
+                          <div class="sheet-section-title-bar">
+                            <div
+                              class="sheet-icon-large sheet-icon-section-appearance"
+                            ></div>
+                            Aparência
+                          </div>
+                          <!-- Tabela de aparência radio button -->
+                          <table class="sheet-subsection-table">
+                            <!-- Linha de gênero -->
+                            <tr>
+                              <!-- Feminino -->
+                              <td>
+                                <input
+                                  type="radio"
+                                  name="personagem_genero"
+                                  value="feminino"
+                                />
+                              </td>
+                              <td>
+                                <div class="noto-emoji">♀️</div>
+                              </td>
+                              <td>
+                                <div class="sheet-section-line-item">
+                                  Feminino
+                                </div>
+                              </td>
+                              <!-- Masculino -->
+                              <td>
+                                <input
+                                  type="radio"
+                                  name="personagem_genero"
+                                  value="masculino"
+                                />
+                              </td>
+                              <td>
+                                <div class="noto-emoji">♂️</div>
+                              </td>
+                              <td>
+                                <div class="sheet-section-line-item">
+                                  Masculino
+                                </div>
+                              </td>
+                              <!-- Trans -->
+                              <td>
+                                <input
+                                  type="radio"
+                                  name="personagem_genero"
+                                  value="trans"
+                                />
+                              </td>
+                              <td>
+                                <div class="noto-emoji">⚧️</div>
+                              </td>
+                              <td>
+                                <div class="sheet-section-line-item">Trans</div>
+                              </td>
+                            </tr>
+                            <!-- Linha de idade -->
+                            <tr>
+                              <!-- Criança -->
+                              <td>
+                                <input
+                                  type="radio"
+                                  name="personagem_idade"
+                                  value="crianca"
+                                />
+                              </td>
+                              <td>
+                                <div class="noto-emoji">🧒</div>
+                              </td>
+                              <td>
+                                <div class="sheet-section-line-item">
+                                  Criança
+                                </div>
+                              </td>
+                              <!-- Adulto -->
+                              <td>
+                                <input
+                                  type="radio"
+                                  name="personagem_idade"
+                                  value="adulto"
+                                  checked
+                                />
+                              </td>
+                              <td>
+                                <div class="noto-emoji">🧑</div>
+                              </td>
+                              <td>
+                                <div class="sheet-section-line-item">
+                                  Adulto
+                                </div>
+                              </td>
+                              <!-- Idoso -->
+                              <td>
+                                <input
+                                  type="radio"
+                                  name="personagem_idade"
+                                  value="idoso"
+                                />
+                              </td>
+                              <td>
+                                <div class="noto-emoji">🧓</div>
+                              </td>
+                              <td>
+                                <div class="sheet-section-line-item">Idoso</div>
+                              </td>
+                            </tr>
+                            <!-- Linha de tamanho -->
+                            <tr>
+                              <!-- Pequeno -->
+                              <td>
+                                <input
+                                  type="radio"
+                                  name="personagem_tamanho"
+                                  value="pequeno"
+                                />
+                              </td>
+                              <td>
+                                <div class="noto-emoji">🐒</div>
+                              </td>
+                              <td>
+                                <div class="sheet-section-line-item">
+                                  Pequeno
+                                </div>
+                              </td>
+                              <!-- Médio -->
+                              <td>
+                                <input
+                                  type="radio"
+                                  name="personagem_tamanho"
+                                  value="medio"
+                                  checked
+                                />
+                              </td>
+                              <td>
+                                <div class="noto-emoji">🦧</div>
+                              </td>
+                              <td>
+                                <div class="sheet-section-line-item">Médio</div>
+                              </td>
+                              <!-- Grande -->
+                              <td>
+                                <input
+                                  type="radio"
+                                  name="personagem_tamanho"
+                                  value="grande"
+                                />
+                              </td>
+                              <td>
+                                <div class="noto-emoji">🦍</div>
+                              </td>
+                              <td>
+                                <div class="sheet-section-line-item">
+                                  Grande
+                                </div>
+                              </td>
+                            </tr>
+                            <!-- Linha de peso -->
+                            <tr>
+                              <!-- Magro -->
+                              <td>
+                                <input
+                                  type="radio"
+                                  name="personagem_peso"
+                                  value="magro"
+                                />
+                              </td>
+                              <td>
+                                <div class="noto-emoji">🐟</div>
+                              </td>
+                              <td>
+                                <div class="sheet-section-line-item">Magro</div>
+                              </td>
+                              <!-- Saúdavel -->
+                              <td>
+                                <input
+                                  type="radio"
+                                  name="personagem_peso"
+                                  value="saudavel"
+                                  checked
+                                />
+                              </td>
+                              <td>
+                                <div class="noto-emoji">🐬</div>
+                              </td>
+                              <td>
+                                <div class="sheet-section-line-item">
+                                  Saúdavel
+                                </div>
+                              </td>
+                              <!-- Gordo -->
+                              <td>
+                                <input
+                                  type="radio"
+                                  name="personagem_peso"
+                                  value="gordo"
+                                />
+                              </td>
+                              <td>
+                                <div class="noto-emoji">🐋</div>
+                              </td>
+                              <td>
+                                <div class="sheet-section-line-item">Gordo</div>
+                              </td>
+                            </tr>
+                          </table>
+                          <!-- Tabela de aparência color button -->
+                          <table class="sheet-subsection-table">
+                            <tr>
+                              <!-- Pele -->
+                              <td>
+                                <div
+                                  class="sheet-undertext sheet-text-align-center"
+                                >
+                                  Pele
+                                </div>
+                                <input
+                                  type="color"
+                                  name="personagem_cor_pele"
+                                  value="#cd853f"
+                                />
+                              </td>
+                              <!-- Olhos -->
+                              <td>
+                                <div
+                                  class="sheet-undertext sheet-text-align-center"
+                                >
+                                  Olhos
+                                </div>
+                                <input
+                                  type="color"
+                                  name="personagem_cor_olhos"
+                                  value="#00a86b"
+                                />
+                              </td>
+                              <!-- Cabelo -->
+                              <td>
+                                <div
+                                  class="sheet-undertext sheet-text-align-center"
+                                >
+                                  Cabelo
+                                </div>
+                                <input
+                                  type="color"
+                                  name="personagem_cor_cabelo"
+                                  value="#e32636"
+                                />
+                              </td>
+                              <!-- Tattoo -->
+                              <td>
+                                <div
+                                  class="sheet-undertext sheet-text-align-center"
+                                >
+                                  Tattoo
+                                </div>
+                                <input
+                                  type="checkbox"
+                                  name="personagem_tem_tattoo"
+                                />
+                              </td>
+                              <!-- Barba -->
+                              <td>
+                                <div
+                                  class="sheet-undertext sheet-text-align-center"
+                                >
+                                  Barba
+                                </div>
+                                <input
+                                  type="checkbox"
+                                  name="personagem_tem_barba"
+                                />
+                              </td>
+                              <!-- Deficiência -->
+                              <td>
+                                <div
+                                  class="sheet-undertext sheet-text-align-center"
+                                >
+                                  Deficiência
+                                </div>
+                                <input
+                                  type="checkbox"
+                                  name="personagem_tem_deficiencia"
+                                />
+                              </td>
+                            </tr>
+                          </table>
+                          <!-- Outros detalhes da aparência -->
+                          <textarea
+                            class="sheet-paragraph-box"
+                            name="personagem_aparencia"
+                            placeholder="Preencha aqui com outras caracteristica da aparencia do seu personagem"
+                          ></textarea>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Fim da caixa de aparência -->
+
+                <br />
+
+                <!-- Características -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div class="sheet-section-frame sheet-section-content">
+                          <!-- Titúlo da seção -->
+                          <div class="sheet-section-title-bar">
+                            <div
+                              class="sheet-icon-large sheet-icon-section-features"
+                            ></div>
+                            Características
+                          </div>
+                          <!-- Caixa de texto -->
+                          <div>
+                            <textarea
+                              class="sheet-long-list-box"
+                              name="personagem_caracteristicas"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Fim da caixa de características -->
+
+                <br />
+
+                <!-- Habilidades -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div class="sheet-section-frame sheet-section-content">
+                          <!-- Titúlo da seção -->
+                          <div class="sheet-section-title-bar">
+                            <div
+                              class="sheet-icon-large sheet-icon-section-features"
+                            ></div>
+                            Habilidades
+                          </div>
+                          <!-- Caixa de texto -->
+                          <div>
+                            <textarea
+                              class="sheet-long-list-box"
+                              name="personagem_habilidades"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </td>
+            <!-- FIM DA COLUNA 2 -->
+          </tr>
+        </table>
+      </div>
+
+      <!-- Fim da Guia 1 -->
+
+      <!-- Guia 2 -->
+      <div class="sheet-tabbed-pane sheet-tab sheet-tab2">
+        <table class="sheet-columns">
+          <tr>
+            <!-- Coluna 1 -->
+            <td class="sheet-column1-cell">
+              <div class="sheet-column1">
+                <!-- Combate -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div class="sheet-section-frame sheet-section-content">
+                          <!-- Titúlo da seção -->
+                          <div class="sheet-section-title-bar">
+                            <div
+                              class="sheet-icon-large sheet-icon-section-combat"
+                            ></div>
+                            Combate
+                          </div>
+                          <!-- Classe de armadura -->
+                          <div
+                            class="sheet-subsection-nontable-row"
+                            style="border-bottom: none"
+                          >
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">&nbsp;</div>
+                              <div class="sheet-icon sheet-icon-ac"></div>
+                              CA:
+                            </div>
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">&nbsp;</div>
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="text"
+                                name="personagem_ca_total"
+                                value="10"
+                                readonly
+                              />
+                            </div>
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">&nbsp;</div>
+                              =
+                            </div>
+                            <div class="sheet-inline">
+                              <div
+                                class="sheet-undertext sheet-text-align-center"
+                              >
+                                Armadura
+                              </div>
+                              <input
+                                class="sheet-numbox"
+                                style="width: 3em"
+                                type="number"
+                                name="personagem_ca_base"
+                                min="0"
+                                step="1"
+                                value="10"
+                                onchange="campoAlterado(this)"
+                              />
+                            </div>
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">&nbsp;</div>
+                              +
+                            </div>
+                            <div class="sheet-inline">
+                              <div
+                                class="sheet-undertext sheet-text-align-center"
+                              >
+                                Habilidade
+                              </div>
+                              <select
+                                class="sheet-numbox"
+                                style="width: 3.5em"
+                                name="personagem_ca_habilidade"
+                                onchange="campoAlterado(this)"
+                              >
+                                <option value="0">N/A</option>
+                                <option value="for">For</option>
+                                <option value="des">Des</option>
+                                <option value="con">Con</option>
+                                <option value="int">Int</option>
+                                <option value="sab">Sab</option>
+                                <option value="car">Car</option>
+                              </select>
+                            </div>
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">&nbsp;</div>
+                              +
+                            </div>
+                            <div class="sheet-inline">
+                              <div
+                                class="sheet-undertext sheet-text-align-center"
+                              >
+                                Bônus
+                              </div>
+                              <input
+                                class="sheet-numbox"
+                                type="number"
+                                name="personagem_ca_bonus"
+                                step="1"
+                                value="0"
+                                onchange="campoAlterado(this)"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="sheet-subsection-nontable-row">
+                            <!-- Armadura -->
+                            <div
+                              class="sheet-half-width"
+                              style="width: calc(50% - 10px)"
+                            >
+                              <div class="sheet-undertext">
+                                Armadura equipada
+                              </div>
+                              <select
+                                name="personagem_equip_armadura"
+                                style="text-align: left"
+                              >
+                                <option value="none">N/A</option>
+                                <optgroup label="Leve">
+                                  <option value="Acolchoada">
+                                    Acolchoada (+1)
+                                  </option>
+                                  <option value="Couro">Couro (+1)</option>
+                                  <option value="Couro Batido">
+                                    Couro Batido (+2)
+                                  </option>
+                                </optgroup>
+                                <optgroup label="Média">
+                                  <option value="Gibão de peles">
+                                    Gibão de peles (+2)
+                                  </option>
+                                  <option value="Camisão de malha">
+                                    Camisa de malha (+3)
+                                  </option>
+                                  <option value="Brunea">Brunea (+4)</option>
+                                  <option value="Peitoral de Aço">
+                                    Peitoral de Aço (+4)
+                                  </option>
+                                  <option value="Meia-Armadura">
+                                    Meia-Armadura (+5)
+                                  </option>
+                                </optgroup>
+                                <optgroup label="Pesada">
+                                  <option value="Cota de Anéis">
+                                    Cota de Anéis (+4)
+                                  </option>
+                                  <option value="Cota de Malha">
+                                    Cota de Malha (+6)
+                                  </option>
+                                  <option value="Cota de Talas">
+                                    Cota de Talas (+7)
+                                  </option>
+                                  <option value="Placas">Placas (+8)</option>
+                                </optgroup>
+                              </select>
+                            </div>
+                            <!-- Escudo -->
+                            <div
+                              class="sheet-half-width"
+                              style="width: calc(50% - 10px)"
+                            >
+                              <div class="sheet-undertext">Escudo Equipado</div>
+                              <select
+                                name="personagem_equip_escudo"
+                                style="text-align: left"
+                              >
+                                <option value="none">N/A</option>
+                                <option value="Broquel">Broquel (+1)</option>
+                                <option value="Lanterna">Lanterna (+1)</option>
+                                <option value="Templario">
+                                  Templario (+2)
+                                </option>
+                                <option value="Oval">Oval (+2)</option>
+                                <option value="Porta dupla">
+                                  Porta dupla (+3)
+                                </option>
+                                <option value="Torre">Torre (+3)</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <!-- Pontos de vida -->
+                          <div class="sheet-subsection-nontable-row">
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">&nbsp;</div>
+                              <div class="sheet-icon sheet-icon-hp"></div>
+                            </div>
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">&nbsp;</div>
+                              PV: (
+                            </div>
+                            <div class="sheet-inline">
+                              <div
+                                class="sheet-undertext sheet-text-align-center"
+                              >
+                                Temp.
+                              </div>
+                              <input
+                                class="sheet-numbox"
+                                type="number"
+                                name="personagem_pv_temporario"
+                                min="0"
+                                step="1"
+                                value="0"
+                              />
+                            </div>
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">&nbsp;</div>
+                              )
+                            </div>
+                            <div class="sheet-inline">
+                              <div
+                                class="sheet-undertext sheet-text-align-center"
+                              >
+                                Atual
+                              </div>
+                              <input
+                                class="sheet-numbox"
+                                type="number"
+                                name="personagem_pv_atual"
+                                step="1"
+                                value="1"
+                              />
+                            </div>
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">&nbsp;</div>
+                              /
+                            </div>
+                            <div class="sheet-inline">
+                              <div
+                                class="sheet-undertext sheet-text-align-center"
+                              >
+                                Max
+                              </div>
+                              <input
+                                class="sheet-numbox"
+                                type="number"
+                                name="personagem_pv_max"
+                                min="1"
+                                step="1"
+                                value="1"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- Dados de vida -->
+                          <div class="sheet-subsection-nontable-row">
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">&nbsp;</div>
+                              <div class="sheet-icon sheet-icon-hd"></div>
+                            </div>
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">&nbsp;</div>
+                              DV:
+                            </div>
+                            <div class="sheet-inline">
+                              <div
+                                class="sheet-undertext sheet-text-align-center"
+                              >
+                                Restante
+                              </div>
+                              <input
+                                style="width: 8em"
+                                type="text"
+                                name="personagem_dv_restante"
+                              />
+                            </div>
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">&nbsp;</div>
+                              /
+                            </div>
+                            <div class="sheet-inline">
+                              <div
+                                class="sheet-undertext sheet-text-align-center"
+                              >
+                                Total
+                              </div>
+                              <input
+                                style="width: 8em"
+                                type="text"
+                                name="personagem_dv_total"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- Teste vs Morte -->
+                          <div class="sheet-subsection-nontable-row">
+                            <div
+                              class="sheet-icon sheet-icon-death-saves"
+                            ></div>
+                            Teste vs Morte:
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">
+                                <input
+                                  type="checkbox"
+                                  name="personagem_teste_morte_sucesso1"
+                                  value="1"
+                                />
+                                <input
+                                  type="checkbox"
+                                  name="personagem_teste_morte_sucesso2"
+                                  value="1"
+                                />
+                                <input
+                                  type="checkbox"
+                                  name="personagem_teste_morte_sucesso3"
+                                  value="1"
+                                />
+                                Sucessos
+                              </div>
+                              <div class="sheet-undertext">
+                                <input
+                                  type="checkbox"
+                                  name="personagem_teste_morte_falha1"
+                                  value="1"
+                                />
+                                <input
+                                  type="checkbox"
+                                  name="personagem_teste_morte_falha2"
+                                  value="2"
+                                />
+                                <input
+                                  type="checkbox"
+                                  name="personagem_teste_morte_falha3"
+                                  value="3"
+                                />
+                                Falhas
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Ataques -->
+                          <div
+                            class="sheet-subsection-nontable-row"
+                            style="
+                              display: flex;
+                              justify-content: space-around;
+                              border-bottom: none;
+                            "
+                          >
+                            <div style="padding: 10px">
+                              <div class="sheet-icon sheet-icon-attack"></div>
+                              Ataques:
+                            </div>
+                            <div style="padding: 10px">
+                              <button onclick="addAttack()">Novo ataque</button>
+                            </div>
+                          </div>
+
+                          <!-- Caixas de ataque -->
+                          <div class="sheet-entry-array">
+                            <fieldset
+                              class="repeating_attacks sheet-repeater-fieldset"
+                              id="attackSet"
+                            >
+                              <!-- Seção de repetição -->
+                              <div
+                                class="sheet-repeated-entry"
+                                style="
+                                  border: none;
+                                  background-color: bisque;
+                                  border-radius: 5%;
+                                "
+                              >
+                                <!-- Seleção de armas -->
+                                <div class="sheet-inline">
+                                  <div class="sheet-undertext">Arma</div>
+
+                                  <select
+                                    type="text"
+                                    name="personagem_equip_arma_tipo"
+                                    style="width: 90%"
+                                  >
+                                    <optgroup label="Simples Corpo-a-Corpo">
+                                      <option value="Adaga">Adaga</option>
+                                      <option value="Azagaia">Azagaia</option>
+                                      <option value="Cajado">Cajado</option>
+                                      <option value="Clava Grande">
+                                        Clava Grande
+                                      </option>
+                                      <option value="Desarmado">
+                                        Desarmado
+                                      </option>
+                                      <option value="Foice Curta">
+                                        Foice Curta
+                                      </option>
+                                      <option value="Lança">Lança</option>
+                                      <option value="Maça">Maça</option>
+                                      <option value="Machadinha">
+                                        Machadinha
+                                      </option>
+                                      <option value="Martelo Leve">
+                                        Martelo Leve
+                                      </option>
+                                      <option value="Porrete">Porrete</option>
+                                    </optgroup>
+                                    <optgroup label="Simples à Distância">
+                                      <option value="Arco Curto">
+                                        Arco Curto
+                                      </option>
+                                      <option value="Beste Leve">
+                                        Beste Leve
+                                      </option>
+                                      <option value="Dardo">Dardo</option>
+                                      <option value="Funda">Funda</option>
+                                      <option value="Pistola Leve">
+                                        Pistola Leve
+                                      </option>
+                                    </optgroup>
+                                    <optgroup label="Marcial Corpo-a-Corpo">
+                                      <option value="Alabarda">Alabarda</option>
+                                      <option value="Açoite">Açoite</option>
+                                      <option value="Chicote">Chicote</option>
+                                      <option value="Cimitarra">
+                                        Cimitarra
+                                      </option>
+                                      <option value="Espada Curta">
+                                        Espada Curta
+                                      </option>
+                                      <option value="Espada Duas Lâminas">
+                                        Espada Duas Lâminas
+                                      </option>
+                                      <option value="Espada Duas Mãos">
+                                        Espada Duas Mãos
+                                      </option>
+                                      <option value="Espada Longa">
+                                        Espada Longa
+                                      </option>
+                                      <option value="Florete">Florete</option>
+                                      <option value="Garrote">Garrote</option>
+                                      <option value="Glaive">Glaive</option>
+                                      <option value="Lança de Montaria">
+                                        Lança de Montaria
+                                      </option>
+                                      <option value="Lasso">Lasso</option>
+                                      <option value="Maça Estrela">
+                                        Maça Estrela
+                                      </option>
+                                      <option value="Machado">Machado</option>
+                                      <option value="Machado Grande">
+                                        Machado Grande
+                                      </option>
+                                      <option value="Mangual">Mangual</option>
+                                      <option value="Marreta">Marreta</option>
+                                      <option value="Martelo de Guerra">
+                                        Martelo de Guerra
+                                      </option>
+                                      <option value="Picareta de Guerra">
+                                        Picareta de Guerra
+                                      </option>
+                                      <option value="Pique">Pique</option>
+                                      <option value="Tridente">Tridente</option>
+                                    </optgroup>
+                                    <optgroup label="Marcial à Distância">
+                                      <option value="Arco Longo">
+                                        Arco Longo
+                                      </option>
+                                      <option value="Besta de Mão">
+                                        Besta de Mão
+                                      </option>
+                                      <option value="Besta Pesada">
+                                        Besta Pesada
+                                      </option>
+                                      <option value="Boleadeira">
+                                        Boleadeira
+                                      </option>
+                                      <option value="Carabina">Carabina</option>
+                                      <option value="Pistola">Pistola</option>
+                                      <option value="Rede">Rede</option>
+                                      <option value="Rifle">Rifle</option>
+                                      <option value="Zarabatana">
+                                        Zarabatana
+                                      </option>
+                                    </optgroup>
+                                    <optgroup label="Outros">
+                                      <option value="Outra arma">
+                                        Outra arma
+                                      </option>
+                                      <option value="Magia DC">
+                                        Magia Desc. Curto
+                                      </option>
+                                      <option value="Magia DC">
+                                        Magia Desc. Longo
+                                      </option>
+                                      <option value="Magia Outra">
+                                        Magia Outra
+                                      </option>
+                                    </optgroup>
+                                  </select>
+                                </div>
+                                <!-- Bônus de ataque -->
+                                <div class="sheet-inline">
+                                  <div
+                                    class="sheet-undertext sheet-text-align-center"
+                                  >
+                                    Bônus de Ataque
+                                  </div>
+                                  +<input
+                                    class="sheet-numbox"
+                                    type="number"
+                                    name="personagem_equip_arma_bonus"
+                                    value="0"
+                                    readonly
+                                  />
+                                </div>
+
+                                <br />
+
+                                <div
+                                  class="sheet-inline"
+                                  style="width: 16px"
+                                ></div>
+
+                                <!-- Habilidade de ataque -->
+                                <div class="sheet-inline">
+                                  <div
+                                    class="sheet-undertext sheet-text-align-center"
+                                  >
+                                    Habilidade
+                                  </div>
+                                  <select
+                                    class="sheet-numbox"
+                                    style="width: 4em"
+                                    name="personagem_equip_arma_habilidade"
+                                    onchange="campoAlterado(this)"
+                                  >
+                                    <option value="0">None</option>
+                                    <option value="for">For</option>
+                                    <option value="des">Des</option>
+                                    <option value="con">Con</option>
+                                    <option value="int">Int</option>
+                                    <option value="sab">Sab</option>
+                                    <option value="car">Car</option>
+                                  </select>
+                                </div>
+
+                                <!-- Proficiência -->
+                                <div class="sheet-inline">
+                                  <div
+                                    class="sheet-undertext sheet-text-align-center"
+                                  >
+                                    Prof.?
+                                  </div>
+                                  <select
+                                    class="sheet-numbox"
+                                    style="width: 4.5em"
+                                    name="personagem_equip_arma_profiencia"
+                                    onchange="campoAlterado(this)"
+                                  >
+                                    <option value="1">Sim</option>
+                                    <option value="0">Não</option>
+                                  </select>
+                                </div>
+
+                                <!-- Outros modificadores de ataque -->
+                                <div class="sheet-inline">
+                                  <div
+                                    class="sheet-undertext sheet-text-align-center"
+                                  >
+                                    Bônus extra
+                                  </div>
+                                  <input
+                                    class="sheet-numbox"
+                                    type="text"
+                                    name="personagem_equip_arma_extra"
+                                    value="0"
+                                    onchange="campoAlterado(this)"
+                                  />
+                                </div>
+
+                                <!-- Botão de excluir bloco -->
+                                <div class="sheet-inline">
+                                  <div
+                                    class="sheet-undertext sheet-text-align-center"
+                                  >
+                                    Excluir
+                                  </div>
+                                  <button
+                                    type="button"
+                                    class="removerAtaque noto-emoji"
+                                  >
+                                    ❌
+                                  </button>
+                                </div>
+
+                                <!-- Caixa de texto -->
+                                <div class="sheet-undertext">
+                                  Descrição / Ao atacar:
+                                </div>
+                                <textarea
+                                  class="sheet-paragraph-box"
+                                  name="personagem_equip_arma_descricao"
+                                ></textarea>
+                              </div>
+                              <!-- fim da seção de repetição -->
+                            </fieldset>
+                          </div>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Fim da caixa de combate -->
+              </div>
+            </td>
+            <!-- FIM DA COLUNA 1 -->
+
+            <!-- Coluna 2 -->
+            <td class="sheet-column2-cell">
+              <div class="sheet-column2">
+                <!-- Equipamento -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div class="sheet-section-frame sheet-section-content">
+                          <!-- Titúlo da seção -->
+                          <div class="sheet-section-title-bar">
+                            <div
+                              class="sheet-icon-large sheet-icon-section-equipment"
+                            ></div>
+                            Equipamento
+                          </div>
+
+                          <!-- Itens Mágicos -->
+                          <div
+                            class="sheet-subsection-nontable-row"
+                            style="border-bottom: none"
+                          >
+                            <div
+                              class="sheet-icon sheet-icon-attuned-items"
+                            ></div>
+                            Itens Mágicos sintonizados
+                            <div class="sheet-big-padding sheet-full-width">
+                              <textarea
+                                name="personagem_equip_itens_magicos"
+                                class="sheet-paragraph-box"
+                                style="width: 100%"
+                              ></textarea>
+                            </div>
+                          </div>
+
+                          <!-- Munições -->
+                          <div class="sheet-subsection-nontable-row">
+                            <div class="sheet-icon sheet-icon-quiver"></div>
+                            Munições:
+                            <div class="sheet-inline sheet-half-width">
+                              <input
+                                style="width: 10em"
+                                type="text"
+                                name="personagem_equip_municao_nome"
+                              />
+                            </div>
+                            <div class="sheet-inline">
+                              <input
+                                class="sheet-numbox"
+                                style="margin-top: 4px; width: 3em"
+                                type="number"
+                                name="personagem_equip_municao_quantidade"
+                                min="0"
+                                step="1"
+                                value="0"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- Porta Moeda -->
+                          <div class="sheet-subsection-nontable-row">
+                            <div class="sheet-icon sheet-icon-coin-purse"></div>
+                            Porta Moeda
+                            <!-- PC -->
+                            <div>
+                              <div class="sheet-inline sheet-half-width">
+                                <div class="sheet-undertext">Moeda</div>
+                                Peças de cobre
+                              </div>
+                              &nbsp;
+                              <div class="sheet-inline">
+                                <div class="sheet-undertext">Quantidade</div>
+                                <input
+                                  class="sheet-numbox"
+                                  style="width: 5em; margin-top: 4px"
+                                  type="number"
+                                  name="personagem_moeda_cobre"
+                                  min="0"
+                                  step="1"
+                                  value="0"
+                                  onchange="campoAlterado(this)"
+                                />
+                              </div>
+                              &nbsp;
+                              <div class="sheet-inline">
+                                <div class="sheet-undertext">Valor</div>
+                                <input
+                                  class="sheet-numbox"
+                                  style="width: 4em; margin-top: 4px"
+                                  type="number"
+                                  value="0.01"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                            <!-- PP -->
+                            <div>
+                              <div class="sheet-inline sheet-half-width">
+                                Peças de prata
+                              </div>
+                              &nbsp;
+                              <div class="sheet-inline">
+                                <input
+                                  class="sheet-numbox"
+                                  style="width: 5em; margin-top: 4px"
+                                  type="number"
+                                  name="personagem_moeda_prata"
+                                  min="0"
+                                  step="1"
+                                  value="0"
+                                  onchange="campoAlterado(this)"
+                                />
+                              </div>
+                              &nbsp;
+                              <div class="sheet-inline">
+                                <input
+                                  class="sheet-numbox"
+                                  style="width: 4em; margin-top: 4px"
+                                  type="number"
+                                  value="0.1"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                            <!-- PE -->
+                            <div>
+                              <div class="sheet-inline sheet-half-width">
+                                Peças de electro
+                              </div>
+                              &nbsp;
+                              <div class="sheet-inline">
+                                <input
+                                  class="sheet-numbox"
+                                  style="width: 5em; margin-top: 4px"
+                                  type="number"
+                                  name="personagem_moeda_electro"
+                                  min="0"
+                                  step="1"
+                                  value="0"
+                                  onchange="campoAlterado(this)"
+                                />
+                              </div>
+                              &nbsp;
+                              <div class="sheet-inline">
+                                <input
+                                  class="sheet-numbox"
+                                  style="width: 4em; margin-top: 4px"
+                                  type="number"
+                                  value="0.5"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                            <!-- PO -->
+                            <div>
+                              <div class="sheet-inline sheet-half-width">
+                                Peças de ouro
+                              </div>
+                              &nbsp;
+                              <div class="sheet-inline">
+                                <input
+                                  class="sheet-numbox"
+                                  style="width: 5em; margin-top: 4px"
+                                  type="number"
+                                  name="personagem_moeda_ouro"
+                                  min="0"
+                                  step="1"
+                                  value="0"
+                                  onchange="campoAlterado(this)"
+                                />
+                              </div>
+                              &nbsp;
+                              <div class="sheet-inline">
+                                <input
+                                  class="sheet-numbox"
+                                  style="width: 4em; margin-top: 4px"
+                                  type="number"
+                                  value="1"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                            <!-- PL -->
+                            <div>
+                              <div class="sheet-inline sheet-half-width">
+                                Peças de Platina
+                              </div>
+                              &nbsp;
+                              <div class="sheet-inline">
+                                <input
+                                  class="sheet-numbox"
+                                  style="width: 5em; margin-top: 4px"
+                                  type="number"
+                                  name="personagem_moeda_platina"
+                                  min="0"
+                                  step="1"
+                                  value="0"
+                                  onchange="campoAlterado(this)"
+                                />
+                              </div>
+                              &nbsp;
+                              <div class="sheet-inline">
+                                <input
+                                  class="sheet-numbox"
+                                  style="width: 4em; margin-top: 4px"
+                                  type="number"
+                                  value="10"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+
+                            <!-- Total em Ouro -->
+                            <div style="width: 100%; text-align: left">
+                              <input
+                                class="sheet-numbox"
+                                style="width: 4em"
+                                type="number"
+                                name="personagem_moeda_total_quantidade"
+                                value="0"
+                                readonly
+                              />
+                              moedas. Total em ouro:
+                              <input
+                                class="sheet-numbox"
+                                style="width: 4em"
+                                type="number"
+                                name="personagem_moeda_total_valor"
+                                value="0"
+                                readonly
+                              />
+                            </div>
+                            <!-- Massa das moedas -->
+                            <div style="width: 100%; text-align: right">
+                              Massa total das moedas:
+                              <input
+                                class="sheet-numbox"
+                                style="width: 6em"
+                                type="number"
+                                name="personagem_moeda_total_massa"
+                                value="0"
+                                readonly
+                              />
+                              Kg.
+                            </div>
+                          </div>
+
+                          <!-- Inventário -->
+                          <div class="sheet-icon sheet-icon-belt-pouch"></div>
+                          Inventário
+                          <table
+                            class="sheet-subsection-table2"
+                            id="tabelaInventario"
+                          >
+                            <tr>
+                              <th class="sheet-undertext" style="width: 15%">
+                                Excluir
+                              </th>
+                              <th class="sheet-undertext" style="width: 55%">
+                                Nome do item
+                              </th>
+                              <th class="sheet-undertext" style="width: 15%">
+                                Kg
+                              </th>
+                              <th class="sheet-undertext" style="width: 15%">
+                                Quant.
+                              </th>
+                            </tr>
+                            <!-- Item 1 -->
+                            <tr class="compendium-drop-target">
+                              <td></td>
+                              <td>
+                                <input
+                                  class="sheet-long-text-input"
+                                  style="width: 100%"
+                                  type="text"
+                                  name="personagem_inventario_nome"
+                                />
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  style="width: 100%"
+                                  type="number"
+                                  name="personagem_inventario_massa"
+                                  min="0"
+                                  step="0.1"
+                                  value="0"
+                                  onchange="recalcularCarga()"
+                                />
+                              </td>
+                              <td>
+                                <input
+                                  class="sheet-numbox"
+                                  style="width: 100%"
+                                  type="number"
+                                  name="personagem_inventario_quantidade"
+                                  min="0"
+                                  value="0"
+                                  onchange="recalcularCarga()"
+                                />
+                              </td>
+                            </tr>
+                          </table>
+                          <button id="addItemButton">Adicionar Item</button>
+
+                          <!-- Carga -->
+                          <div
+                            style="vertical-align: bottom; text-align: right"
+                          >
+                            <div class="sheet-inline">
+                              <div
+                                class="sheet-undertext sheet-text-align-center"
+                              >
+                                Total
+                              </div>
+                              <input
+                                class="sheet-numbox"
+                                style="width: 4em"
+                                type="number"
+                                name="personagem_carga_total"
+                                value="0"
+                                readonly
+                                id="cargaTotal"
+                              />
+                            </div>
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">&nbsp;</div>
+                              /
+                            </div>
+                            <div class="sheet-inline">
+                              <div
+                                class="sheet-undertext sheet-text-align-center"
+                              >
+                                Sobrecarga
+                              </div>
+                              <input
+                                class="sheet-numbox"
+                                style="width: 4em"
+                                type="number"
+                                name="personagem_carga_sobrecarga"
+                                value="50"
+                                readonly
+                                id="cargaSobrecarga"
+                              />
+                            </div>
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">&nbsp;</div>
+                              /
+                            </div>
+                            <div class="sheet-inline">
+                              <div
+                                class="sheet-undertext sheet-text-align-center"
+                              >
+                                Ultracarga
+                              </div>
+                              <input
+                                class="sheet-numbox"
+                                style="width: 4em"
+                                type="number"
+                                name="personagem_carga_ultracarga"
+                                value="75"
+                                readonly
+                                id="cargaUltracarga"
+                              />
+                            </div>
+                            <div class="sheet-inline">
+                              <div class="sheet-undertext">&nbsp;</div>
+                              /
+                            </div>
+                            <div class="sheet-inline">
+                              <div
+                                class="sheet-undertext sheet-text-align-center"
+                              >
+                                Puxar
+                              </div>
+                              <input
+                                class="sheet-numbox"
+                                style="width: 4em"
+                                type="number"
+                                name="personagem_carga_puxar"
+                                value="150"
+                                readonly
+                                id="cargaPuxar"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Fim da caixa de equipamento -->
+              </div>
+            </td>
+            <!-- FIM DA COLUNA 2 -->
+          </tr>
+        </table>
+      </div>
+
+      <!-- Fim da Guia 2 -->
+
+      <!-- Guia 3 -->
+      <div class="sheet-tabbed-pane sheet-tab sheet-tab3">
+        <table class="sheet-columns">
+          <tr>
+            <!-- Coluna 1 -->
+            <td class="sheet-column1-cell">
+              <div class="sheet-column1">
+                <!-- Pets -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div class="sheet-section-frame sheet-section-content">
+                          <!-- Titúlo da seção -->
+                          <div class="sheet-section-title-bar">
+                            <div
+                              class="sheet-icon-large sheet-icon-section-pet"
+                            ></div>
+                            Pets
+                          </div>
+                          <div class="sheet-undertext">
+                            Montaria, Companheiros animais, Familiares, etc.
+                          </div>
+                          <table
+                            class="sheet-subsection-table2"
+                            id="tabelaPets"
+                          >
+                            <tr></tr>
+                          </table>
+                          <div class="sheet-undertext">
+                            <button id="addPetButton" style="width: 100%">
+                              Novo Pet
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Fim da caixa de pets -->
+              </div>
+            </td>
+            <!-- FIM DA COLUNA 1 -->
+
+            <!-- Coluna 2 -->
+            <td class="sheet-column2-cell">
+              <div class="sheet-column2">
+                <!-- Riquezas -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div class="sheet-section-frame sheet-section-content">
+                          <!-- Titúlo da seção -->
+                          <div class="sheet-section-title-bar">
+                            <div
+                              class="sheet-icon-large sheet-icon-section-deeds"
+                            ></div>
+                            Riquezas
+                          </div>
+                          <div class="sheet-undertext">
+                            Imóveis, escrituras, bens não portáteis, etc.
+                          </div>
+                          <textarea
+                            class="sheet-long-list-box"
+                            name="personagem_riquezas"
+                          ></textarea>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Fim da caixa de riquezas -->
+              </div>
+            </td>
+            <!-- FIM DA COLUNA 2 -->
+          </tr>
+        </table>
+      </div>
+
+      <!-- Fim da Guia 3 -->
+
+      <!-- Guia 4 -->
+      <div class="sheet-tabbed-pane sheet-tab sheet-tab4">
+        <table class="sheet-columns">
+          <tr>
+            <!-- Coluna 1 -->
+            <td class="sheet-column1-cell">
+              <div class="sheet-column1">
+                <!-- Conjuração -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div class="sheet-section-frame sheet-section-content">
+                          <!-- Titúlo da seção -->
+                          <div class="sheet-section-title-bar">
+                            <div
+                              class="sheet-icon-large sheet-icon-section-magic"
+                            ></div>
+                            Conjuração
+                          </div>
+
+                          <!-- Habilidade conjuradora -->
+                          <div>
+                            <div class="sheet-inline sheet-full-width">
+                              Habilidade conjuradora
+                              <select
+                                class="sheet-numbox"
+                                style="width: 5em"
+                                name="personagem_conjuracao_habilidade"
+                              >
+                                <option value="For">For</option>
+                                <option value="Des">Des</option>
+                                <option value="Con">Con</option>
+                                <option value="Int">Int</option>
+                                <option value="Sab">Sab</option>
+                                <option value="Car">Car</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <!-- Classe de dificuldade de salvaguarda contra magias, bônus de ataque-->
+                          <div>
+                            <div class="sheet-inline">
+                              CD da magia:
+                              <input
+                                class="sheet-numbox"
+                                type="number"
+                                name="personagem_conjuracao_cd"
+                                value="10"
+                                min="0"
+                              />
+                            </div>
+                            <div class="sheet-inline">
+                              Bônus: +<input
+                                class="sheet-numbox"
+                                type="number"
+                                name="personagem_conjuracao_bonus"
+                                value="0"
+                                min="0"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- Total de magias preparadas -->
+                          <div style="padding: 4px">
+                            <div class="sheet-inline">
+                              Total de magias preparadas:
+                              <input
+                                class="sheet-numbox"
+                                style="width: 3.5em"
+                                type="number"
+                                name="personagem_conjuracao_preparadas"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Fim da caixa de conjuração -->
+              </div>
+            </td>
+            <!-- FIM DA COLUNA 1 -->
+
+            <!-- Coluna 2 -->
+            <td class="sheet-column2-cell">
+              <div class="sheet-column2">
+                <!-- Espaços de magia -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div class="sheet-section-frame sheet-section-content">
+                          <!-- Titúlo da seção -->
+                          <div class="sheet-section-title-bar">
+                            Espaços de magia
+                          </div>
+
+                          <!-- Espaços de magia -->
+                          <div
+                            class="sheet-text-align-right"
+                            style="padding: 0px"
+                          >
+                            <!-- Col1 -->
+                            <div
+                              class="sheet-inline sheet-half-width sheet-section-line-item"
+                            >
+                              <div class="sheet-undertext">
+                                Disponível / Por dia
+                              </div>
+                              Truques:
+                              <input
+                                class="sheet-numbox"
+                                style="width: 4em"
+                                type="number"
+                                name="personagem_magias_espaco0_total"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                            </div>
+
+                            <!-- Col2 -->
+                            <div
+                              class="sheet-inline sheet-half-width sheet-section-line-item"
+                            >
+                              <div class="sheet-undertext">
+                                Disponível / Por dia
+                              </div>
+                              Nível 5:
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco5_atual"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                              /
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco5_total"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                            </div>
+                          </div>
+
+                          <div
+                            class="sheet-text-align-right"
+                            style="padding: 0px"
+                          >
+                            <div
+                              class="sheet-inline sheet-half-width sheet-section-line-item"
+                            >
+                              Nível 1:
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco1_atual"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                              /
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco1_total"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                            </div>
+                            <div
+                              class="sheet-inline sheet-half-width sheet-section-line-item"
+                            >
+                              Nível 6:
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco6_atual"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                              /
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco6_total"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                            </div>
+                          </div>
+
+                          <div
+                            class="sheet-text-align-right"
+                            style="padding: 0px"
+                          >
+                            <div
+                              class="sheet-inline sheet-half-width sheet-section-line-item"
+                            >
+                              Nível 2:
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco2_atual"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                              /
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco2_total"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                            </div>
+                            <div
+                              class="sheet-inline sheet-half-width sheet-section-line-item"
+                            >
+                              Nível 7:
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco7_atual"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                              /
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco7_total"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                            </div>
+                          </div>
+
+                          <div
+                            class="sheet-text-align-right"
+                            style="padding: 0px"
+                          >
+                            <div
+                              class="sheet-inline sheet-half-width sheet-section-line-item"
+                            >
+                              Nível 3:
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco3_atual"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                              /
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco3_total"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                            </div>
+                            <div
+                              class="sheet-inline sheet-half-width sheet-section-line-item"
+                            >
+                              Nível 8:
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco8_atual"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                              /
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco8_total"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                            </div>
+                          </div>
+
+                          <div
+                            class="sheet-text-align-right"
+                            style="padding: 0px"
+                          >
+                            <div
+                              class="sheet-inline sheet-half-width sheet-section-line-item"
+                            >
+                              Nível 4:
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco4_atual"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                              /
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco4_total"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                            </div>
+                            <div
+                              class="sheet-inline sheet-half-width sheet-section-line-item"
+                            >
+                              Nível 9:
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco9_atual"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                              /
+                              <input
+                                class="sheet-numbox"
+                                style="width: 2em"
+                                type="number"
+                                name="personagem_magias_espaco9_total"
+                                step="1"
+                                min="0"
+                                value="0"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Fim da caixa de espaços de magia -->
+              </div>
+            </td>
+            <!-- FIM DA COLUNA 2 -->
+          </tr>
+
+          <!-- Coluna 3 -->
+          <tr>
+            <td class="sheet-column3-cell" colspan="2">
+              <div class="sheet-column3">
+                <!-- Magias -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div
+                          class="sheet-section-frame-2x sheet-section-content"
+                        >
+                          <!-- Titúlo da seção -->
+                          <div class="sheet-section-title-bar">
+                            <div
+                              class="sheet-icon-large sheet-icon-section-spells"
+                            ></div>
+                            Magias
+                          </div>
+                          <br />
+
+                          <div style="padding-left: 16px">
+                            <div class="sheet-entry-array">
+                              <table id="tabelaMagias"></table>
+                              <button id="criarMagia" onclick="criarMagia()">
+                                Criar Magia
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Fim da caixa de magias -->
+              </div>
+            </td>
+          </tr>
+          <!-- FIM DA COLUNA 3 -->
+        </table>
+      </div>
+      <!-- Fim da Guia 4 -->
+
+      <!-- Guia 5 -->
+      <div class="sheet-tabbed-pane sheet-tab sheet-tab5">
+        <table class="sheet-columns">
+          <tr>
+            <td class="sheet-column1-cell">
+              <!-- Coluna 1 -->
+              <div class="sheet-column1">
+                <!-- Contatos -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div class="sheet-section-frame sheet-section-content">
+                          <!-- Titúlo da seção -->
+                          <div class="sheet-section-title-bar">
+                            <div
+                              class="sheet-icon-large sheet-icon-section-contacts"
+                            ></div>
+                            Contatos
+                          </div>
+                          <div class="sheet-undertext">
+                            Anote aqui as pessoas importantes que você conheceu
+                          </div>
+                          <textarea
+                            class="sheet-long-list-box"
+                            name="personagem_contatos"
+                          ></textarea>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Fim da caixa de contatos -->
+              </div>
+            </td>
+            <!-- FIM DA COLUNA 1 -->
+
+            <!-- Coluna 2 -->
+            <td class="sheet-column2-cell">
+              <div class="sheet-column2">
+                <!-- Anotações -->
+                <div>
+                  <!-- Caixa -->
+                  <table class="sheet-section-layout-table">
+                    <!-- barra superior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                    <!-- Conteúdo -->
+                    <tr>
+                      <!-- Espaço da barra superior -->
+                      <td></td>
+                      <td class="sheet-paper-background">
+                        <div class="sheet-section-frame sheet-section-content">
+                          <!-- Titúlo da seção -->
+                          <div class="sheet-section-title-bar">
+                            <div
+                              class="sheet-icon-large sheet-icon-section-notes"
+                            ></div>
+                            Anotações
+                          </div>
+                          <div class="sheet-undertext">
+                            Objetivos, Pistas, Locais, e outras coisas para se
+                            lembrar
+                          </div>
+                          <textarea
+                            class="sheet-long-list-box"
+                            name="personagem_anotacoes"
+                          ></textarea>
+                        </div>
+                      </td>
+                      <!-- Espaço da barra inferior -->
+                      <td></td>
+                    </tr>
+                    <!-- barra inferior -->
+                    <tr>
+                      <!-- Quina esquerda -->
+                      <td class="sheet-scroll-left"></td>
+                      <!-- Margem central -->
+                      <td class="sheet-scroll-roll"></td>
+                      <!-- Quina direita -->
+                      <td class="sheet-scroll-right"></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Fim da caixa de anotações -->
+              </div>
+            </td>
+            <!-- FIM DA COLUNA 2 -->
+          </tr>
+        </table>
+      </div>
+      <!-- Fim da Guia 5 -->
+
+      <br />
+      <hr />
+      <div class="sheet-undertext sheet-text-align-center">
+        Aprimorada e traduzida por <u>DMThysgo (TEM)</u> | DnD5E Character
+        Scrolls Designed by <u>Chris C. Hall</u>
+      </div>
+    </div>
+    <script src="js/botoes.js"></script>
+    <script src="js/calculos.js"></script>
+    <script src="js/dbintegration.js"></script>
+  </body>
+</html>
